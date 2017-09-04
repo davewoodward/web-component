@@ -1,0 +1,71 @@
+{
+  "@type": "plugin",
+  "id": "webComponent",
+  "name": "Web Component",
+  "icon": "/essentials/images/icons/wcIcon.png",
+  "introduction": "Allows W3C-compliant web component to be incorporated into your Hippo CMS site.",
+  "description": "Description of web component plugin.",
+  "imageUrls": [
+    "/essentials/images/screenshots/wcImage.png"
+  ],
+  "packageFile": "/META-INF/web_component_instructions.xml",
+  "restClasses": [],
+  "type": "feature",
+  "vendor": {
+    "@type": "vendor",
+    "name": "Salte Technology",
+    "url": "https://www.salte.io"
+  },
+  "categories": {
+    "application": [
+      "facets",
+      "integration",
+      "web component",
+      "content"
+    ],
+    "type": [
+      "feature"
+    ],
+    "license": [
+      "community"
+    ]
+  },
+  "repositories": [
+    {
+      "id": "Local",
+      "name": "Local Maven 2 Repository",
+      "snapshots": {
+        "@type": "snapshots",
+        "updatePolicy": "always",
+        "checksumPolicy": "fail",
+        "enabled": "true"
+      },
+      "targetPom": "cms",
+      "@type": "repository",
+      "url": "http://localhost:8081/repository/maven-snapshots/",
+      "releases": {
+        "@type": "releases",
+        "enabled": "false"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "@type": "dependency",
+      "groupId": "io.salte.hippo",
+      "artifactId": "web-component-plugin",
+      "version": "1.0-SNAPSHOT",
+      "targetPom": "cms"
+    }
+  ],
+  "libraries": [
+    {
+      "items": [
+        {
+        "component": "webComponent",
+        "file": "webComponent.js"
+        }
+      ]
+    }
+  ]
+}
