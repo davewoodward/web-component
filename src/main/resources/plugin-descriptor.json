@@ -47,6 +47,23 @@
         "@type": "releases",
         "enabled": "false"
       }
+    },
+    {
+      "id": "Local",
+      "name": "Local Maven 2 Repository",
+      "snapshots": {
+        "@type": "snapshots",
+        "updatePolicy": "always",
+        "checksumPolicy": "fail",
+        "enabled": "true"
+      },
+      "targetPom": "site",
+      "@type": "repository",
+      "url": "http://localhost:8081/repository/maven-snapshots/",
+      "releases": {
+        "@type": "releases",
+        "enabled": "false"
+      }
     }
   ],
   "dependencies": [
@@ -56,6 +73,13 @@
       "artifactId": "web-component-plugin",
       "version": "1.0-SNAPSHOT",
       "targetPom": "cms"
+    },
+    {
+      "@type": "dependency",
+      "groupId": "io.salte.hippo",
+      "artifactId": "web-component-plugin",
+      "version": "1.0-SNAPSHOT",
+      "targetPom": "site"
     }
   ],
   "libraries": [

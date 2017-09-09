@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/jsp/include/imports.jsp" %>
 
-<%--@elvariable id="document" type="java.lang.Object"--%>
+<%--@elvariable id="cparam" type="io.salte.hippo.plugins.info.WebComponentInfo"--%>
 <c:if test="${requestScope.document ne null}">
   <div>Document Present</div>
 </c:if>
